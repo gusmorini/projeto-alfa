@@ -1,0 +1,26 @@
+version: '2'
+services:
+  myapp:
+    image: 'bitnami/codeigniter:3'
+    ports:
+      - '80:8000'
+    volumes:
+      - '.:/app'
+    depends_on:
+      - mariadb
+  mariadb:
+    image: 'bitnami/mariadb:latest'
+    environment:
+      - MARIADB_ROOT_PASSWORD=root
+      - MARIADB_DATABASE=controle
+      - MARIADB_USER=admin
+      - MARIADB_PASSWORD=admin
+  admin:
+    image: phpmyadmin/phpmyadmin:latest
+    links:
+      - mariadb
+    ports:
+      - 8001:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
