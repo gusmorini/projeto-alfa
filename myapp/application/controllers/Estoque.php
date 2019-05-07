@@ -6,6 +6,11 @@ class Estoque extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('estoque_model');
+
+		// verifica se esta autenticado
+		if (!$_SESSION['autenticado']){
+			redirect(base_url('/login'));
+		}
 	}
 
 	public function index(){

@@ -7,6 +7,12 @@ class Clientes extends CI_Controller {
 		parent::__construct();
 		$this->load->model('clientes_model');
 		$this->load->library('table');
+
+		// verifica se esta autenticado
+		if (!$_SESSION['autenticado']){
+			redirect(base_url('/login'));
+		}
+		
 	}
 
 	public function index(){

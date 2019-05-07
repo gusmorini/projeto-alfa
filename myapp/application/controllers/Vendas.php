@@ -7,6 +7,11 @@ class Vendas extends CI_Controller {
 		parent::__construct();
 		//$this->load->model('os_model');
 		$this->load->model('estoque_model');
+
+		// verifica se esta autenticado
+		if (!$_SESSION['autenticado']){
+			redirect(base_url('/login'));
+		}
 	}
 
 	public function index(){

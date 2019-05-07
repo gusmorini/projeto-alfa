@@ -7,6 +7,12 @@ class Busca extends CI_Controller {
 		parent::__construct();
 		$this->load->model('categorias_model','modelcategorias');
 		$this->categorias = $this->modelcategorias->listar_categorias();
+
+		// verifica se esta autenticado
+		if (!$_SESSION['autenticado']){
+			redirect(base_url('/login'));
+		}
+		
 	}
 
 	public function index(){

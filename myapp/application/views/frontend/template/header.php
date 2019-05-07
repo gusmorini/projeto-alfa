@@ -25,6 +25,7 @@
             <!-- <li><a href="<?= base_url('estoque/produtos') ?>" role="button">Produtos </a></li> -->
             <li><a href="<?= base_url('estoque') ?>" role="button">Estoque </a></li>
             <li><a href="<?= base_url('admin') ?>">Financeiro </a></li>
+            <li><a href="<?= base_url('login/sair') ?>">Sair </a></li>
           </ul> <!-- ul.navbar left -->    
         </div>                        
     </div> <!-- nav-header -->

@@ -1,17 +1,7 @@
-<style type="text/css">
-	
-.banner-home{
-	height: 200px;
-	background: #f0f0f0;
-	margin-bottom: 20px;
-}
 
-</style>
-
-
-	<div class="col-sm-12 text-center banner-home">
-		<h1>BEM-VINDO</h1>
-	</div>
+	<!-- <div class="col-sm-12 text-center banner">
+		<img src="./assets/frontend/img/capa1.png" alt="">
+	</div> -->
 
 	<div class="row">
 

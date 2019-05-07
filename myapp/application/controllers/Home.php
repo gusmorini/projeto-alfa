@@ -4,11 +4,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {
 
 	public function __construct(){
+
 		parent::__construct();
 		$this->load->model('home_model');
+
+		// verifica se esta autenticado
+		if (!$_SESSION['autenticado']){
+			redirect(base_url('/login'));
+		}
 	}
 
 	public function index(){
+
+		
 		
 		$dados['titulo'] = "Controle";
 		$dados['subtitulo'] = "Home";

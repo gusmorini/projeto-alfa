@@ -17,6 +17,7 @@
     <link href="<?=base_url()?>assets/frontend/css/controle.css" rel="stylesheet">
 
     <link href="<?=base_url()?>assets/frontend/css/print.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/frontend/css/login.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -69,5 +70,3 @@
 
 </head>
 <body>
-
-
