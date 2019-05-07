@@ -10,7 +10,7 @@
 
     <form action="/login/autenticar" method="post">
 
-        <h1>Login</h1>
+       
 
         <?php 
 
@@ -34,7 +34,7 @@
             <input required class="form-control" type="password" name="senha">
         </div>
         
-        <button class="btn btn-primary">Logar</button>
+        <button class="btn btn-warning">Entrar</button>
 
            
 

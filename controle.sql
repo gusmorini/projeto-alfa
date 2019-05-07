@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.6.6deb5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: 08-Abr-2019 às 23:55
--- Versão do servidor: 8.0.15
--- versão do PHP: 7.2.15-0ubuntu0.18.04.2
+-- Host: localhost:3306
+-- Generation Time: 07-Maio-2019 às 11:28
+-- Versão do servidor: 10.1.38-MariaDB-0ubuntu0.18.04.1
+-- PHP Version: 7.2.17-0ubuntu0.18.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `guscontrol`
+-- Database: `controle`
 --
 
 -- --------------------------------------------------------
@@ -16695,6 +16693,25 @@ INSERT INTO `lembretes` (`ide_lem`, `tel_lem`, `tex_lem`, `nom_lem`, `dat_lem`, 
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `login`
+--
+
+CREATE TABLE `login` (
+  `id` int(11) NOT NULL,
+  `user` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `login`
+--
+
+INSERT INTO `login` (`id`, `user`, `password`) VALUES
+(1, 'admin', '81dc9bdb52d04dc20036dbd8313ed055');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `receber`
 --
 
@@ -18278,6 +18295,12 @@ ALTER TABLE `lembretes`
   ADD PRIMARY KEY (`ide_lem`);
 
 --
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `receber`
 --
 ALTER TABLE `receber`
@@ -18299,44 +18322,41 @@ ALTER TABLE `venda_item`
 --
 ALTER TABLE `cliente`
   MODIFY `ide_cli` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=493;
-
 --
 -- AUTO_INCREMENT for table `controle`
 --
 ALTER TABLE `controle`
   MODIFY `ide_cont` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15264;
-
 --
 -- AUTO_INCREMENT for table `estoque`
 --
 ALTER TABLE `estoque`
   MODIFY `ide_pec` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=219;
-
 --
 -- AUTO_INCREMENT for table `ficha`
 --
 ALTER TABLE `ficha`
   MODIFY `ide_pro` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2287;
-
 --
 -- AUTO_INCREMENT for table `lembretes`
 --
 ALTER TABLE `lembretes`
   MODIFY `ide_lem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2275;
-
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `receber`
 --
 ALTER TABLE `receber`
   MODIFY `ide_recebe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1551;
-
 --
 -- AUTO_INCREMENT for table `venda_item`
 --
 ALTER TABLE `venda_item`
   MODIFY `ide_item` int(10) NOT NULL AUTO_INCREMENT;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

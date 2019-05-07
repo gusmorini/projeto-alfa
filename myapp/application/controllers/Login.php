@@ -11,7 +11,7 @@ class Login extends CI_Controller {
 	public function index(){
 
         // verifica se esta autenticado
-		if ($_SESSION['autenticado']){
+		if (isset($_SESSION['autenticado']) && $_SESSION['autenticado'] == true){
 			redirect(base_url('/home'));
         }
 		
@@ -29,7 +29,7 @@ class Login extends CI_Controller {
     public function autenticar(){
 
         // verifica se esta autenticado
-		if ($_SESSION['autenticado']){
+		if (isset($_SESSION['autenticado']) && $_SESSION['autenticado'] == true){
 			redirect(base_url('/home'));
         }
         
